@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fund Transfer</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fund-transfer.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-primary text-white text-center py-3">
+        <h1>Fund Transfer</h1>
+    </header>
+
+    <div class="container mt-5">
+        <!-- Navigation Buttons -->
+        <div class="mb-3 d-flex justify-content-between">
+            <button class="btn btn-secondary" id="backBtn">Back</button>
+            <button class="btn btn-primary" id="homeBtn">Home</button>
+        </div>
+
+        <!-- Fund Transfer Options -->
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <a href="http://127.0.0.1:8083/modules/fund-transfer/intra-bank-fund-transfer/intra-bank-fund-transfer.html" class="card h-100 text-decoration-none card-hover">
+                    <div class="card-body text-center bg-gradient-primary">
+                        <i class="bi bi-bank2"></i>
+                        <h5 class="card-title">Intra Bank Fund Transfer</h5>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 mb-4">
+                <a href="http://127.0.0.1:8083/modules/fund-transfer/inter-bank-fund-transfer/inter-bank-fund-transfer.html" class="card h-100 text-decoration-none card-hover">
+                    <div class="card-body text-center bg-gradient-success">
+                        <i class="bi bi-bank"></i>
+                        <h5 class="card-title">Inter Bank Fund Transfer</h5>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Fund Transfer Guidelines -->
+        <h2 class="mt-5">Fund Transfer Guidelines</h2>
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                Guidelines
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered table-hover table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Guideline</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Security</td>
+                            <td>Ensure that all fund transfers are conducted through secure channels to prevent fraud and unauthorized access.</td>
+                        </tr>
+                        <tr>
+                            <td>Authorization</td>
+                            <td>All fund transfers must be authorized by the account holder. Multi-factor authentication is recommended for added security.</td>
+                        </tr>
+                        <tr>
+                            <td>Limits</td>
+                            <td>Be aware of the transfer limits set by your bank. These limits may vary based on the type of account and the method of transfer.</td>
+                        </tr>
+                        <tr>
+                            <td>Fees</td>
+                            <td>Understand the fees associated with different types of fund transfers. Intra-bank transfers are usually free, while inter-bank transfers may incur charges.</td>
+                        </tr>
+                        <tr>
+                            <td>Processing Time</td>
+                            <td>Intra-bank transfers are typically processed instantly, while inter-bank transfers may take up to 3 business days.</td>
+                        </tr>
+                        <tr>
+                            <td>Recipient Information</td>
+                            <td>Ensure that the recipient's information is accurate to avoid delays or errors in the transfer process.</td>
+                        </tr>
+                        <tr>
+                            <td>Notifications</td>
+                            <td>Opt-in for notifications to receive updates on the status of your fund transfers. This helps in tracking and confirming successful transactions.</td>
+                        </tr>
+                        <tr>
+                            <td>Dispute Resolution</td>
+                            <td>Know the process for resolving disputes related to fund transfers. Contact your bank immediately if you notice any unauthorized transactions.</td>
+                        </tr>
+                        <tr>
+                            <td>Record Keeping</td>
+                            <td>Maintain records of all fund transfers for future reference. This is important for both personal tracking and resolving any potential issues.</td>
+                        </tr>
+                        <tr>
+                            <td>Customer Support</td>
+                            <td>Familiarize yourself with the customer support options available for fund transfer issues. Prompt support can help resolve problems quickly.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white text-center py-3 mt-5">
+        <p>&copy; 2024 ABC NetBanking. All rights reserved.</p>
+    </footer>
+
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="fund-transfer.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC NetBanking Portal</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css">
+    
+
+   </head>
+<body>
+    <header>
+        <div class="logo-bar">
+            <div class="logo-container">
+                <img src="assets/images/logo.png" alt="ABC Bank Logo" class="logo">
+                <span class="site-title">ABC NetBanking</span>
+            </div>
+        </div>
+        <nav>
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="modules/user-management/user-home.html">User Management</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="modules/user-management/user-registration.html">User Registration</a></li>
+                        <li><a class="dropdown-item" href="modules/user-management/user-login.html">User Login and Authentication</a></li>
+                        <li><a class="dropdown-item" href="modules/user-management/user-login.html?forgotPassword=true">Forgot Password/Password Reset</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item pipe">|</li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="modules/account-management/account-management.html">Account Management</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="modules/account-management/view-account-details/view-account-details.html">View Account Details</a></li>
+                        <li><a class="dropdown-item" href="modules/account-management/manage-beneficiaries/manage-beneficiaries.html">Manage Beneficiaries</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item pipe">|</li>
+               
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="modules/fund-transfer/fund-transfer.html">Fund Transfer</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="modules/fund-transfer/intra-bank-fund-transfer/intra-bank-fund-transfer.html">Intra-bank Fund Transfer</a></li>
+                        <li><a class="dropdown-item" href="modules/fund-transfer/inter-bank-fund-transfer/inter-bank-fund-transfer.html">Inter-bank Fund Transfer</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item pipe">|</li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="modules/transaction-history/transaction-history.html">Transaction History</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="modules/transaction-history/view-transaction-history/view-transaction-history.html">View Transaction History</a></li>
+                        <li><a class="dropdown-item" href="modules/transaction-history/download-statement/download-statement.html">Download Statements</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item pipe">|</li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="modules/notifications/notifications.html">Notifications</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="modules/notifications/email-sms-alerts.html">Email and SMS Alerts</a></li>
+                    </ul>
+                </li>    
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <div class="highlighted-message">
+            <span class="cache_blink">If slowness is observed during Login Page loading, please refresh the page for better experience.<br><br>
+            ABC Bank never asks for confidential information such as PIN and OTP from customers. Any such call can be made only by a fraudster. Please do not share personal info.</span>
+        </div>
+        <div class="banking-box personal-banking" style="text-align: center;">
+            <i class="bi bi-person-circle bootstrap-user-logo" style="font-size: 3rem; display: block; margin: 0 auto;"></i>
+            <h2>Personal Banking</h2>
+            <button class="custom-button" onclick="window.location.href='modules/user-management/user-login.html'">Login</button>
+            <div class="features">
+                <a href="modules/user-management/user-registration.html"><i class="bi bi-person-plus"></i> New User Registration</a>
+                <a href="#"><i class="bi bi-question-circle"></i> Ask Question</a>
+                <a href="#"><i class="bi bi-headset"></i> Customer Care</a>
+                <a href="#"><i class="bi bi-lock"></i> Lock/Unlock</a>
+            </div>
+            <p class="highlighted-content">ABC's internet banking portal provides personal banking services that gives you complete control over all your banking demands online.</p>
+        </div>
+        <div class="banking-box personal-banking" style="text-align: center;">
+            <i class="bi bi-building bootstrap-user-logo" style="font-size: 3rem; display: block; margin: 0 auto;"></i>
+            <h2>Corporate Banking</h2>
+            <button class="custom-button">Login</button>
+            <p class="highlighted-content2">Have you tried our new simplified and intuitive business banking platform? Log in to ABCbusiness.ABC to avail business banking services.</p>
+            <div class="features">
+                <a href="#"><i class="bi bi-person-plus"></i> New Business Registration</a>
+                <a href="#"><i class="bi bi-question-circle"></i> Ask Question</a>
+                <a href="#"><i class="bi bi-headset"></i> Customer Care</a>
+                <a href="#"><i class="bi bi-lock"></i> Lock/Unlock</a>
+            </div>
+            <p class="highlighted-content">Corporate Banking application to administer and manage non personal accounts online.</p>
+        </div>
+        <marquee class="marquee-message">
+            Customers can now make the GST payment using INB channel with extended time up to 23.00 hours. | PPF ACCOUNT OPENING IS NOW AVAILABLE ON YONO - Click here | Mandatory Profile password change after 365 days introduced for added security. | Call us toll free on 1800 1234 and 1800 2100 and get a wide range of services through ABC Contact Centre. | ABC never asks for your Card/PIN/OTP/CVV details on phone, message or email. Please do not click on links received on your email or mobile asking your Bank/Card details
+        </marquee>
+        <div class="useful-links">
+            <ul class="links-list">
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+                <li><a href="#">Link 4</a></li>
+                <li><a href="#">Link 5</a></li>
+                <li><a href="#">Link 6</a></li>
+                <li><a href="#">Link 7</a></li>
+                <li><a href="#">Link 8</a></li>
+                <li class="more-links"><a href="#">Link 9</a></li>
+                <li class="more-links"><a href="#">Link 10</a></li>
+                <li class="more-links"><a href="#">Link 11</a></li>
+                <li class="more-links"><a href="#">Link 12</a></li>
+                <li class="more-links"><a href="#">Link 13</a></li>
+                <li class="more-links"><a href="#">Link 14</a></li>
+                <li class="more-links"><a href="#">Link 15</a></li>
+                <li class="more-links"><a href="#">Link 16</a></li>
+            </ul>
+            <button id="show-more" class="custom-button">Show More Links</button>
+        </div>
+        <div class="image-slider">
+            <button class="prev">❮</button>
+            <div class="images">
+                <img src="assets/images/gridImage1.jpg" alt="Image 1">
+                <img src="assets/images/gridImage2.jpg" alt="Image 2">
+                <img src="assets/images/gridImage3.jpg" alt="Image 3">
+                <!-- Add more images as needed -->
+            </div>
+            <button class="next">❯</button>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-left">
+            Site best viewed at 1024 x 768 resolution in Microsoft Edge 79+, Mozilla 96+, Google Chrome 97+
+        </div>
+        <div class="footer-right">
+            © ABC Bank of India (APM Id:Serv_Tran_564)
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

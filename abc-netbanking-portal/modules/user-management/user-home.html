@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="user-home.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-primary text-white text-center py-3">
+        <h1>User Management</h1>
+    </header>
+
+    <div class="container mt-5">
+        <!-- Navigation Buttons -->
+        <div class="mb-3 d-flex justify-content-between">
+            <button class="btn btn-secondary" id="backBtn">Back</button>
+            <button class="btn btn-primary" id="homeBtn">Home</button>
+        </div>
+
+        <!-- Image Card Buttons -->
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <a href="http://127.0.0.1:8083/modules/user-management/user-registration.html" class="card h-100 text-decoration-none card-hover">
+                    <img src="images/user-registration.jpg" class="card-img-top" alt="User Registration">
+                    <div class="card-body text-center">
+                        <span class="btn btn-success">User Registration</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mb-4">
+                <a href="http://127.0.0.1:8083/modules/user-management/user-login.html" class="card h-100 text-decoration-none card-hover">
+                    <img src="images/user-login.jpg" class="card-img-top" alt="User Login">
+                    <div class="card-body text-center">
+                        <span class="btn btn-info">User Login</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mb-4">
+                <a href="http://127.0.0.1:8083/modules/user-management/user-login.html?forgotPassword=true" class="card h-100 text-decoration-none card-hover">
+                    <img src="images/forgot-password.jpg" class="card-img-top" alt="Forgot Password">
+                    <div class="card-body text-center">
+                        <span class="btn btn-warning">Forgot Password</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- RBI Guidelines Table -->
+        <h2 class="mt-5">RBI Common Guidelines</h2>
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                RBI Guidelines
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered table-hover table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Guideline</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Know Your Customer (KYC)</td>
+                            <td>Ensure proper identification of customers to prevent money laundering.</td>
+                        </tr>
+                        <tr>
+                            <td>Anti-Money Laundering (AML)</td>
+                            <td>Implement measures to detect and report suspicious activities.</td>
+                        </tr>
+                        <tr>
+                            <td>Customer Protection</td>
+                            <td>Safeguard customer information and provide secure banking services.</td>
+                        </tr>
+                        <tr>
+                            <td>Fair Practices Code</td>
+                            <td>Adopt fair practices in dealing with customers and resolving grievances.</td>
+                        </tr>
+                        <tr>
+                            <td>Risk Management</td>
+                            <td>Implement robust risk management systems to mitigate financial risks.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white text-center py-3 mt-5">
+        <p>&copy; 2024 ABC NetBanking. All rights reserved.</p>
+    </footer>
+
+    <!-- Notification Modal -->
+    <div class="modal fade" id="notificationModal" tabindex="-1" role="dialog" aria-labelledby="notificationModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title" id="notificationModalLabel">Notification</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="notificationMessage">Notification message goes here.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="user-home.js"></script>
+</body>
+</html>

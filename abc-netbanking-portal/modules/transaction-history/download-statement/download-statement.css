@@ -1,0 +1,70 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+/* Navigation buttons */
+#backBtn, #homeBtn {
+    margin-right: 10px;
+}
+
+/* Card headers */
+.card-header {
+    font-size: 1.25rem;
+}
+
+/* Form spacing */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+/* Table styles */
+.table {
+    margin-top: 20px;
+}
+
+.table thead th {
+    background-color: #343a40;
+    color: white;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}
+
+/* Status colors */
+.text-success {
+    color: green !important;
+}
+
+.text-danger {
+    color: red !important;
+}
+
+/* Collapsible section */
+.collapse.show {
+    display: block;
+}
+
+/* Loader Modal */
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 1rem;
+}

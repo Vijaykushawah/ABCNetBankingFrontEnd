@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="notifications.css">
+</head>
+<body>
+    <!-- Include header from index.html -->
+    <header class="bg-primary text-white p-3">
+        <h1>Notifications</h1>
+    </header>
+
+    <div class="container mt-5">
+        <!-- Navigation Buttons -->
+        <div class="mb-3">
+            <button class="btn btn-secondary" id="backBtn">Back</button>
+            <button class="btn btn-primary" id="homeBtn">Home</button>
+        </div>
+
+        <h2>Notification Settings</h2>
+
+        <!-- Notification Settings Form -->
+        <form id="notificationSettingsForm" class="mb-4">
+            <div class="form-group">
+                <label for="emailAlerts">Email Alerts</label>
+                <select class="form-control" id="emailAlerts" required>
+                    <option value="enabled">Enabled</option>
+                    <option value="disabled">Disabled</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="smsAlerts">SMS Alerts</label>
+                <select class="form-control" id="smsAlerts" required>
+                    <option value="enabled">Enabled</option>
+                    <option value="disabled">Disabled</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-info">Save Settings</button>
+        </form>
+
+        <!-- Notifications Table -->
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                Notifications
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered table-hover table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Date</th>
+                            <th>Type</th>
+                            <th>Message</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="notificationsTableBody">
+                        <!-- Notification rows will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Modal -->
+    <div class="modal fade" id="notificationModal" tabindex="-1" role="dialog" aria-labelledby="notificationModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title" id="notificationModalLabel">Notification</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="notificationMessage">This is a notification message.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include footer from index.html -->
+    <footer class="bg-primary text-white p-3 mt-5">
+        <p>&copy; 2023 Your Company</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="notifications.js"></script>
+</body>
+</html>

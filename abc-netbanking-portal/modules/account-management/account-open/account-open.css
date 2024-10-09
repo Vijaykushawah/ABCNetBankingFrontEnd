@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 75%;
+    margin: 50px auto;
+}
+
+.card {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #e9ecef;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.form-check-label {
+    margin-left: 10px;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.875rem;
+}
+
+label {
+    color: #333;
+    font-weight: bold;
+    font-family: 'Arial Black', sans-serif;
+}
+
+input[type="text"], input[type="email"], input[type="password"], select {
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hover, select:hover {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.bank-guideline:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+.bank-guideline:nth-child(even) {
+    background-color: #e9ecef;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.card, .form-group, .btn {
+    animation: fadeIn 1s ease-in-out;
+}
+
+body.loading {
+    overflow: hidden;
+}
+
+body.loading .loader {
+    display: block;
+}
+
+.loader {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    margin: -25px 0 0 -25px;
+    border: 8px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 8px solid #3498db;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+/* Modal Styles */
+.modal-header {
+    background-color: #007bff;
+    color: white;
+}
+
+.modal-body {
+    background-color: #f9f9f9;
+    color: #dc1818;
+    font-size: 1rem;
+}
+
+.modal-footer {
+    background-color: #e9ecef;
+}
+
+.modal-content {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(195, 24, 24, 0.1);
+}
+
+.modal-title {
+    font-weight: bold;
+}
+
+.modal-footer .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.modal-footer .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}

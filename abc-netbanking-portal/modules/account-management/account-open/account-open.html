@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Account Opening Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="account-open.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="account-open.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header text-center">
+                <h2>Bank Account Opening Form</h2>
+            </div>
+            <div class="card-body">
+                <form id="accountForm" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="branch">Branch:</label>
+                        <select class="form-control" id="branch" name="branch" required>
+                            <option value="">Select Branch</option>
+                            <!-- Add branch options dynamically -->
+                        </select>
+                        <span class="error-message" id="branchError"></span>
+                    </div>
+                    <div class="form-group"></div>
+                        <label for="bankName">Name of the Bank:</label>
+                        <input type="text" class="form-control" id="bankName" name="bankName" required>
+                        <span class="error-message" id="bankNameError"></span>
+                    </div>
+
+               
+
+                    <div class="form-group">
+                        <label for="accountNumber">Account Number:</label>
+                        <input type="text" class="form-control" id="accountNumber" name="accountNumber" maxlength="16" required>
+                        <span class="error-message" id="accountNumberError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="verifyAccountNumber">Verify Account Number:</label>
+                        <input type="text" class="form-control" id="verifyAccountNumber" name="verifyAccountNumber" maxlength="16" required>
+                        <span class="error-message" id="verifyAccountNumberError"></span>
+                    </div>
+
+                  
+
+                  </div>  <div class="form-group">
+                        <label for="accountType">Account Type:</label>
+                        <select class="form-control" id="accountType" name="accountType" required>
+                            <option value="">Select Account Type</option>
+                            <option value="savings">Savings</option>
+                            <option value="current">Current</option>
+                            <option value="fd">Fixed Deposit (FD)</option>
+                            <option value="pf">Provident Fund (PF)</option>
+                            <option value="nri">Non-Resident Indian (NRI)</option>
+                            <option value="nro">Non-Resident Ordinary (NRO)</option>
+                        </select>
+                        <span class="error-message" id="accountTypeError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="micrNumber">MICR Number:</label>
+                        <input type="text" class="form-control auto-populated" id="micrNumber" name="micrNumber" maxlength="9" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="ifscCode">IFSC Code:</label>
+                        <input type="text" class="form-control auto-populated" id="ifscCode" name="ifscCode" maxlength="11" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="branchAddress">Branch Address:</label>
+                        <input type="text" class="form-control auto-populated" id="branchAddress" name="branchAddress" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="branchCity">Branch City:</label>
+                        <input type="text" class="form-control auto-populated" id="branchCity" name="branchCity" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="branchCode">Branch Code:</label>
+                        <input type="text" class="form-control auto-populated" id="branchCode" name="branchCode" readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="searchEmailOrMobile">Search by Email or Mobile:</label>
+                        <input type="text" class="form-control" id="searchEmailOrMobile" name="searchEmailOrMobile">
+                        <span class="error-message" id="searchEmailOrMobileError"></span>
+                    </div>
+                    <div class="form-group text-center">
+                        <button type="button" class="btn btn-primary" id="searchUserBtn">Search</button>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="mobile">Mobile Number:</label>
+                        <input type="text" class="form-control" id="mobile" name="mobile" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="status">Status:</label>
+                        <input type="text" class="form-control" id="status" name="status" readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="photo">Upload Photo:</label>
+                        <input type="file" class="form-control-file" id="photo" name="photo" accept="image/*" required>
+                        <span class="error-message" id="photoError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Identity Verification Documents:</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="panCard" name="identityDocuments" value="panCard">
+                            <label class="form-check-label" for="panCard">PAN Card</label>
+                            <input type="file" class="form-control-file" id="panCardFile" name="panCardFile" accept="image/*,application/pdf" style="display: none;">
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="adharCard" name="identityDocuments" value="adharCard">
+                            <label class="form-check-label" for="adharCard">Adhar Card</label>
+                            <input type="file" class="form-control-file" id="adharCardFile" name="adharCardFile" accept="image/*,application/pdf" style="display: none;">
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="highSchoolCertificate" name="identityDocuments" value="highSchoolCertificate">
+                            <label class="form-check-label" for="highSchoolCertificate">High School Certificate</label>
+                            <input type="file" class="form-control-file" id="highSchoolCertificateFile" name="highSchoolCertificateFile" accept="image/*,application/pdf" style="display: none;">
+                        </div>
+                        <span class="error-message" id="identityDocumentsError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="signature">Upload Signature:</label>
+                        <input type="file" class="form-control-file" id="signature" name="signature" accept="image/*" required>
+                        <span class="error-message" id="signatureError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Bank Guidelines:</label>
+                        <ul class="list-group">
+                            <li class="list-group-item">1. Maintain a minimum balance of $500.</li>
+                            <li class="list-group-item">2. No overdraft facility for savings accounts.</li>
+                            <li class="list-group-item">3. Interest rate for savings accounts is 4% per annum.</li>
+                            <li class="list-group-item">4. Free ATM withdrawals up to 5 times a month.</li>
+                            <li class="list-group-item">5. Charges apply for more than 5 ATM withdrawals.</li>
+                            <li class="list-group-item">6. Internet banking is available for all account types.</li>
+                            <li class="list-group-item">7. Mobile banking is available for all account types.</li>
+                            <li class="list-group-item">8. Cheque book facility is available for current accounts.</li>
+                            <li class="list-group-item">9. Fixed deposit accounts have a minimum tenure of 1 year.</li>
+                            <li class="list-group-item">10. Provident fund accounts are for salaried employees only.</li>
+                            <li class="list-group-item">11. NRI accounts are for non-resident Indians only.</li>
+                            <li class="list-group-item">12. NRO accounts are for non-resident ordinary residents only.</li>
+                            <li class="list-group-item">13. Account statements are sent monthly via email.</li>
+                            <li class="list-group-item">14. SMS alerts are available for all transactions.</li>
+                            <li class="list-group-item">15. Customer support is available 24/7.</li>
+                        </ul>
+                    </div>
+                    <div class="form-group">
+                        <label>Checklist:</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="checkPhoto" name="checklist" value="photo">
+                            <label class="form-check-label" for="checkPhoto">Photo Uploaded</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="checkPanCard" name="checklist" value="panCard">
+                            <label class="form-check-label" for="checkPanCard">PAN Card Uploaded</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="checkAdharCard" name="checklist" value="adharCard">
+                            <label class="form-check-label" for="checkAdharCard">Adhar Card Uploaded</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="checkHighSchoolCertificate" name="checklist" value="highSchoolCertificate">
+                            <label class="form-check-label" for="checkHighSchoolCertificate">High School Certificate Uploaded</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="checkSignature" name="checklist" value="signature">
+                            <label class="form-check-label" for="checkSignature">Signature Uploaded</label>
+                        </div>
+                    </div>
+                    <div class="form-group text-center">
+                        <button type="submit" class="btn btn-primary" id="createAccountBtn">Create Account</button>
+                        <button type="reset" class="btn btn-secondary">Reset</button>
+                    </div>
+                </form>
+                <div id="message"></div>
+            </div>
+        </div>
+    </div>
+    <div id="loader" class="loader"></div>
+
+     <!-- Error Modal -->
+     <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="errorModalLabel">Error</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="errorModalBody">
+                    <!-- Error message will be inserted here -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Management</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="manage-beneficiaries.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="manage-beneficiaries.js"></script>
+</head>
+<body>
+    <!-- Include header from index.html -->
+    <header>
+        <!-- Header content from index.html -->
+    </header>
+
+    <div class="container mt-5">
+        <!-- Navigation Buttons -->
+        <div class="mb-3">
+            <button class="btn btn-secondary" id="backBtn">Back</button>
+            <button class="btn btn-primary" id="homeBtn">Home</button>
+        </div>
+    
+        <!-- Manage Beneficiaries Section -->
+        <div class="card mt-4">
+            <div class="card-header bg-success text-white">
+                Manage Beneficiaries
+            </div>
+            <div class="card-body">
+                <button class="btn btn-success mb-3" id="addBeneficiaryBtn">Add Beneficiary</button>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Account Number</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="beneficiariesList">
+                        <!-- Beneficiaries will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+  
+
+    <!-- Error Modal -->
+<div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="errorModalLabel">Error</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="errorModalBody">
+                <!-- Error message will be inserted here -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Include footer from index.html -->
+    <footer>
+        <!-- Footer content from index.html -->
+    </footer>
+
+    <!-- Add Beneficiary Modal -->
+    <div class="modal fade" id="addBeneficiaryModal" tabindex="-1" role="dialog" aria-labelledby="addBeneficiaryModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addBeneficiaryModalLabel">Add Beneficiary</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="addBeneficiaryForm">
+                        <div class="form-group">
+                            <label for="beneficiaryName">Name</label>
+                            <input type="text" class="form-control" id="beneficiaryName" name="beneficiaryName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="beneficiaryAccountNumber">Account Number</label>
+                            <input type="text" class="form-control" id="beneficiaryAccountNumber" name="beneficiaryAccountNumber" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Add</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
